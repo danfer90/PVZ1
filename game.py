@@ -215,12 +215,7 @@ class MainGame():
         text = font.render(content, True, color)
         return text
 
-
-    def load_help_text(self):
-        text1 = self.draw_text('click derecho:girasol -- click izquierdo:guisante', 26, (255, 0, 0))
-        MainGame.window.blit(text1, (5, 5))
-
-    def init_plant_points(self):
+  def init_plant_points(self):
         for y in range(1, 7):
             points = []
             for x in range(10):
@@ -229,6 +224,11 @@ class MainGame():
             MainGame.map_points_list.append(points)
             print("MainGame.map_points_list", MainGame.map_points_list)
 
+    def load_help_text(self):
+        text1 = self.draw_text('click derecho:girasol -- click izquierdo:guisante', 26, (255, 0, 0))
+        MainGame.window.blit(text1, (5, 5))
+
+  
     def init_map(self):
         for points in MainGame.map_points_list:
             temp_map_list = list()
